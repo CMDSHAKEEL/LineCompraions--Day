@@ -6,24 +6,40 @@ public class LineComprasion {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
- System.out.println("Welcome to line comprasion");
- 
- System.out.println("Welcom to line comprasion");
+		System.out.println("welcom to line comprasion");
+  
 	
-	Scanner ln = new Scanner(System.in);
-	System.out.println("Enter X1 co-ordinate:-");
-	int X1 = ln.nextInt();
-	System.out.println("Enter Y1 co-ordinate:- ");
-	int Y1 = ln.nextInt();
-	System.out.println("Enter X2 co-ordinate:-");
-	int X2 = ln.nextInt();
-	System.out.println("Enter Y2 co-ordinate:-");
-	int Y2 = ln.nextInt();
-	
-	
+	Scanner sc = new Scanner(System.in);
 	 
-	double length = Math.sqrt(Math.pow((X2-X1),2)+Math.pow((Y2-Y1),2));
-	System.out.println("Length of Line :-"+ length);
+	System.out.println("Enter start values of Line x1 and y1: ");
+		System.out.println("Enter First Line values x1 and y1: ");
+		int x1 = sc.nextInt();
+		int y1 = sc.nextInt();
+		System.out.println("Enter end values of Line x2 and y2: ");
+		System.out.println("Enter First Line values x2 and y2: ");
+		int x2 = sc.nextInt();
+		int y2 = sc.nextInt();
+		double lengthOfLine;
+		lengthOfLine = Math.sqrt((x2+x1)*(x2-x1)+(y2+y1)*(y2-y1));
+		System.out.println("The length of the line is : "+lengthOfLine);
+		double lengthOfLine1;
+		lengthOfLine1 = Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+		System.out.println("Enter Second Line values x3 and y3: ");
+             int x3 = sc.nextInt();
+             int y3 = sc.nextInt();
+             System.out.println("Enter Second Line values x4 and y4: ");
+             int x4 = sc.nextInt();
+             int y4 = sc.nextInt();
+             double lengthOfLine2;
+             lengthOfLine2 = Math.sqrt((x4-x3)*(x4-x3)+(y4-y3)*(y4-y3));
+		String str1 = String.valueOf(lengthOfLine1);
+		String str2 = String.valueOf(lengthOfLine2);
+		if(str1.equals(str2))
+			System.out.println("The length of two lines are equal");
+		else
+			System.out.println("The length of two lines are not equal");
+		System.out.println("The length of the first line is : "+lengthOfLine1);
+		System.out.println("The length of the second line is : "+lengthOfLine2);
 	}
 
 }
